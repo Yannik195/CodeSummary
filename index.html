@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Code Summary</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Work+Sans|Ubuntu&display=swap" rel="stylesheet"></head>
+<body>
+
+    <!-- MongoDB -->
+    <div class="tech">
+        <h1>MongoDB</h1>
+        <p class="ex">MongoDB ist eine dokumentenorientierte NoSQL-Datenbank, die in der Programmiersprache C++ geschrieben ist. Da die Datenbank dokumentenorientiert ist, kann sie Sammlungen von JSON-ähnlichen Dokumenten verwalten.</p>
+
+
+        <h2>Useful Commands</h2>
+
+        <div class="code">
+            <p>> use shopDB</p>
+            <p>switched to db shopDB</p>
+        </div>
+
+        <div class="code">
+            <p>> db</p>
+            <p>shopDB</p>
+        </div>
+
+        <div class="code">
+            <p>> show collections</p>
+            <p>items</p>
+            <p>employees</p>
+        </div>
+
+        
+
+        <h2>CRUD</h2>
+
+        <h3>Create</h3>
+        <div class="code">
+            <p>db.items.insert ( {name: "Milk", qty: 12} )</p>
+        </div>
+
+        <h3>Read</h3>
+        <div class="code">
+            <p>db.items.find ()</p>
+        </div>
+
+        <h3>Update</h3>
+        <div class="code">
+            db.items.updateMany ( {name: "Coffee"} , {$set: {price: 0.8}} )
+        </div>
+
+        <h3>Delete</h3>
+        <div class="code">
+            <p>db.items.deleteMany ( {instock: "false") }</p>
+        </div>
+
+    </div>
+
+    <!-- Mongoose -->
+    <div class="tech">
+        <h1>Mongoose</h1>
+        <p class="ex">Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.</p>
+        
+        <h2>Structure</h2>
+
+        <h3>Require</h3>
+        <p class="code">
+            const mongoose = require("mongoose");
+        </p>
+
+        <h3>Connect</h3>
+        <p class="code">
+            mongoose.connect("mongodb://localhost:27017/fruitsDB", {useUnifiedTopology: true, useNewUrlParser: true});
+
+        </p>
+
+        <h3>Model</h3>
+        <p class="code">
+            const Fruit = mongoose.model("Fruit",<br>
+            {<br>
+            name: String,<br>
+            rating: Number,<br>
+            review: String <br>
+            });
+        </p>
+
+        <h3>Object</h3>
+        <p class="code">
+            const fruit = new Fruit({<br>
+            name: "Apple",<br>
+            rating: 5, <br>
+            review: "I dont really like them" <br>
+            });
+        </p>
+
+        <h3>Save</h3>
+        <p class="code">
+            fruit.save();
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 50rem;
+    color: #333;
+    
+}
+
+body {
+    padding: 0 12px;
+}
+
+h1, h2, h3, h4 {
+    color: #2f3238;
+    font-family: "Work Sans", sans-serif;
+    margin: 24px 0 14px 0;
+}
+
+p {
+}
+
+.tech {
+    padding-bottom: 32px;
+ }
+
+.ex {
+    font-family: "Work Sans", sans-serif;
+    color: #676d7a;
+}
+
+.code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f5f7f9;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #d8dee9;
+    border-left: 2px solid #69c;
+}
